@@ -1,13 +1,15 @@
 # Table Of Contents
 
 ## Reverse an Array
-<!-- Short summary or background information -->
+Write a function that reverses an order of any given array of integers. 
 
 ### Challenge
-<!-- Description of the challenge -->
+Please see "Reverse an Array", and note that we cannot used any built in methods of the JavaScript language (i.e. array.reverse())
 
 ### Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+I knew I wanted to do this using a reverse loop, and pushing those integers to a new array as they were called in the loop. Then, I returned the array and called the function outside of the loop to produce the reversed array. 
 
 ### Solution
-<!-- Embedded whiteboard image -->
+![Whiteboarding](assets/array-reverse.png)
+
+![VSCode Solution](assets/array-reverse-solution.png)

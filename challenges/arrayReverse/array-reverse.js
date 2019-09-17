@@ -1,5 +1,3 @@
-const arr = [89, 2354, 3546, 23, 10, -923, 823, -12];
-
 function reverseArray(input) {
   let array = [];
   let index = 0;
@@ -9,8 +7,6 @@ function reverseArray(input) {
   }
   return array;
 }
-
-reverseArray(arr);
 
 module.exports = reverseArray;
 

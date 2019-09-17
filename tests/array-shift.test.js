@@ -20,8 +20,14 @@ describe('shift and insert into array', () => {
 const arr2 = [2, 4, 5, 6, 8];
 const result3 = arrayFunction.removeShiftArray(arr2);
 
+const arr3 = [4, 8, 15, 16, 23, 42];
+const result4 = arrayFunction.removeShiftArray(arr3);
+
 describe('remove middle and shift array', () => {
   it('removes value in middle of given array', () => {
     expect(result3).toStrictEqual([2, 4, 6, 8]);
+  });
+  it('removes value in middle of given array', () => {
+    expect(result4).toStrictEqual([4, 8, 15, 23, 42]);
   });
 });

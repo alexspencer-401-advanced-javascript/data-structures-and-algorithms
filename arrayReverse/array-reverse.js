@@ -1,11 +1,15 @@
-const arr = [1, 2, 3, 4, 5, 6];
+const arr = [89, 2354, 3546, 23, 10, -923, 823, -12];
 
-function reverseArray(arr) {
-    let newArr = [];
-    for(let i = arr.length - 1; i >= 0; i--) {
-      newArr.push(arr[i]);
-    }
-    return newArr;
+function reverseArray(input) {
+  let array = [];
+  let index = 0
+  for(let i = input.length - 1; i >= 0; i--) {
+    array[index] = input[i];
+    index += 1;
+  }
+  return array;
 }
 
 reverseArray(arr);
+
+// Found a great resource at https://teamtreehouse.com/community/reversing-an-array-in-javascript

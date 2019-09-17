@@ -1,1 +1,3 @@
-# data-structures-and-algorithms
+# Table Of Contents
+
+### [Code Challenge | Reverse an Array](arrayReverse/README.md)

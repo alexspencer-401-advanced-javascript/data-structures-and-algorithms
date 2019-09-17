@@ -1,3 +1,3 @@
 # Table Of Contents
 
-### [Code Challenge | Reverse an Array](arrayReverse/README.md)
+### [Code Challenge | Reverse an Array](challenges/arrayReverse/README.md)

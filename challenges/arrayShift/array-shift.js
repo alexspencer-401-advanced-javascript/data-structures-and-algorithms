@@ -11,4 +11,19 @@ function insertShiftArray(input, value) {
   return newArr;
 }
 
-module.exports = insertShiftArray;
+function removeShiftArray(input) {
+  const middle = Math.ceil(input.length / 2);
+  const newArr = [];
+  for(let i = 0; i < middle - 1; i++) {
+    newArr[newArr.length] = input[i];
+  }
+  for(let i = middle; i < input.length; i++) {
+    newArr[newArr.length] = input[i];
+  }
+  return newArr;
+}
+
+module.exports = {
+  insertShiftArray,
+  removeShiftArray
+};

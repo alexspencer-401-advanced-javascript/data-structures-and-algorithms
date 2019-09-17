@@ -12,4 +12,6 @@ function reverseArray(input) {
 
 reverseArray(arr);
 
+module.exports = reverseArray;
+
 // Found a great resource at https://teamtreehouse.com/community/reversing-an-array-in-javascript

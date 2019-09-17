@@ -1,5 +1,5 @@
 ## Code Challenge | Array Shift
-\
+We were to write a challenge that took 
 
 ### Challenge
 

@@ -1,5 +1,5 @@
 function insertShiftArray(input, value) {
-  const middle = ((input.length) / 2);
+  const middle = Math.ceil(input.length / 2);
   const newArr = [];
   for(let i = 0; i < middle; i++) {
     newArr[newArr.length] = input[i];

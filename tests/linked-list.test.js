@@ -41,6 +41,7 @@ describe('linked list tests', () => {
   });
   it('will return false when searching for a value in the linked list that does not exist', () => {
     const list = new linkListImport.LinkedList();
-    expect(list.includes('test')).toBe(false);
+    list.insert('test');
+    expect(list.includes('wrong')).toBe(false);
   });
 });

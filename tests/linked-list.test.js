@@ -31,4 +31,13 @@ describe('linked list tests', () => {
     expect(list.head.next.next).toEqual(first);
     expect(list.size).toBe(3);
   });
+  it('will return true when finding a value within the linked list that exists', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('test');
+    console.log(list);
+    const value = list.head.value;
+    console.log(value);
+    expect(list.includes(value)).toBe(true);
+  });
+  
 });

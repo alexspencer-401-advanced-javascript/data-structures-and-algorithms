@@ -39,5 +39,8 @@ describe('linked list tests', () => {
     console.log(value);
     expect(list.includes(value)).toBe(true);
   });
-  
+  it('will return false when searching for a value in the linked list that does not exist', () => {
+    const list = new linkListImport.LinkedList();
+    expect(list.includes('test')).toBe(false);
+  });
 });

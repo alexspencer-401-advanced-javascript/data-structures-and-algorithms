@@ -34,14 +34,18 @@ describe('linked list tests', () => {
   it('will return true when finding a value within the linked list that exists', () => {
     const list = new linkListImport.LinkedList();
     list.insert('test');
-    console.log(list);
     const value = list.head.value;
-    console.log(value);
     expect(list.includes(value)).toBe(true);
   });
   it('will return false when searching for a value in the linked list that does not exist', () => {
     const list = new linkListImport.LinkedList();
     list.insert('test');
     expect(list.includes('wrong')).toBe(false);
+  });
+  it('can properly return a collection of all the values that exist in the linked list', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('test1');
+    list.insert('test2');
+    expect(list.head.value.toString()).toBe('test2', 'test1');
   });
 });

@@ -30,7 +30,7 @@ class LinkedList {
   }
 
   toString() {
-    let string;
+    let string = '';
     let currentNode = this.head;
     for(let i = 0; i < this.size; i++) {
       string = string + currentNode.value;

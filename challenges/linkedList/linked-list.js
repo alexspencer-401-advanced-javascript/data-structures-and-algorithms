@@ -13,14 +13,14 @@ class LinkedList {
   
   insert(value) {
     const newNode = new Node(value);
-    this.head = newNode; 
     newNode.next = this.head;
+    this.head = newNode; 
     this.size++; 
   }
   
   includes(value) {
     let currentNode = this.head;
-    for(let i = 0; i < this.size; i++ ) {
+    for(let i = 0; i < this.size; i++) {
       if(currentNode.value === value) {
         return true;
       } else {
@@ -32,7 +32,7 @@ class LinkedList {
   toString() {
     let string;
     let currentNode = this.head;
-    for(let i = 0; i < this.size; i++ ) {
+    for(let i = 0; i < this.size; i++) {
       string = string + currentNode.value;
       currentNode = currentNode.next;
     }

@@ -1,13 +1,9 @@
-const LinkedList = require('../challenges/linkedList/linked-list');
+const linkListImport = require('../challenges/linkedList/linked-list');
 
 describe('linked list tests', () => {
   it('can make an empty list', () => {
-    const list = new LinkedList;
-    const result = { 
-      size: 0, 
-      head: null 
-    };
+    const list = new linkListImport.LinkedList();
+    const result = { head: null, size: 0 };
     expect(list).toEqual(result);
+  });
 });
-
-  it()

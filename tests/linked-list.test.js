@@ -1,5 +1,13 @@
-const linkedList = require('../challenges/linkedList/linked-list');
+const LinkedList = require('../challenges/linkedList/linked-list');
 
-describe('it does something with linked lists', () => {
-  it('does something here', () => {
-}
+describe('linked list tests', () => {
+  it('can make an empty list', () => {
+    const list = new LinkedList;
+    const result = { 
+      size: 0, 
+      head: null 
+    };
+    expect(list).toEqual(result);
+});
+
+  it()

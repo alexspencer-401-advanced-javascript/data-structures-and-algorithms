@@ -103,4 +103,47 @@ describe('linked list tests', () => {
     list.insertAfter('test1', 'test2');
     expect(list.head.next.value).toBe('test2');
   });
+  it('Where k is greater than the length of the linked list', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('1');
+    list.insert('2');
+    const k = 4;
+    const result = list.kthFromEnd(k);
+    expect(result).toBe('exception');
+  });
+  it('Where k and the length of the list are the same', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('1');
+    list.insert('2');
+    const k = 2;
+    const result = list.kthFromEnd(k);
+    expect(result).toBe('same length');
+  });
+  it('Where k is not a positive integer', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('1');
+    list.insert('2');
+    const k = -10;
+    const result = list.kthFromEnd(k);
+    expect(result).toBe('not a positive integer');
+  });
+  it('Where the linked list is of a size 1', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('1');
+    const k = 1;
+    const result = list.kthFromEnd(k);
+    const k2 = 0;
+    const result2 = list.kthFromEnd(k2);
+    expect(result).toBe('same length');
+    expect(result2).toBe('exception');
+  });
+  it('happy path', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('1');
+    list.insert('2');
+    list.insert('3');
+    const k = 1;
+    const result = list.kthFromEnd(k);
+    expect(result).toBe('2');
+  });
 });

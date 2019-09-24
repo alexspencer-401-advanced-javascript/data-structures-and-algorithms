@@ -87,6 +87,27 @@ class LinkedList {
     currentNode.next = newNode;
     this.size++;
   }
+  kthFromEnd(k) {
+    let currentNode = this.head;
+    let count = 0;
+    if(k > this.size) {
+      return 'exception';
+    }
+    if(k === this.size) {
+      return 'same length';
+    }
+    if(k < 0) {
+      return 'not a positive integer';
+    }
+    if(this.size <= 1){
+      return 'exception';
+    }
+    while(this.size - k !== count) {
+      currentNode = currentNode.next;
+      count++;
+      return currentNode.value;
+    }
+  }
 }
 
 module.exports = {

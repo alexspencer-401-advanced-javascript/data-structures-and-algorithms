@@ -62,7 +62,6 @@ class LinkedList {
     let count = 1;
     while(currentNode.next !== null && count < value) {
       currentNode = currentNode.next;
-      // currentNode = newNode;
       this.size++;
     }
     newNode.next = currentNode.next;

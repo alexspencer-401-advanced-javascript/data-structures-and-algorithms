@@ -1,5 +1,5 @@
 ## Code Challenge | Linked Lists
-Create a linked list, and then add three methods 1) .insert(), 2), includes(), and string(). Then using these three methods, pass a series of tests, showcasing that the written methods and logic are successful. Do another three functions 1) append, 2) insertBefore, and 3) insertAfter. 
+Create a linked list, and then add three methods 1) .insert(), 2), includes(), and string(). Then using these three methods, pass a series of tests, showcasing that the written methods and logic are successful. Do another three functions 1) append, 2) insertBefore, and 3) insertAfter. Then for the next code challenge, CC 7, we added another function called kthFromEnd(k). This then took in a value, k, which acts like an index (although there are no indexes in linked lists). k starts from the end, starts at 0, and increments. We were to return the value of the node found at position k.  
 
 ### Challenge Description
 Please see above for code challenge description. This is a combo of two code challenges. 
@@ -10,3 +10,4 @@ My approach to this was really to do some heavy research before beginning, under
 ### Solution
 
 ![VSCode Solution](../../assets/linked-list-solution.png)
+![Whiteboard Challenge 7](../../assets/kthfromend-whiteboard.jpg)

@@ -38,6 +38,26 @@ class LinkedList {
     }
     return string;
   }
+
+  append(value) {
+    const newNode = new Node(value);
+    let currentNode = this.head;
+    while(currentNode.next) {
+      currentNode = currentNode.next;
+    }
+    currentNode.next = newNode;
+    this.size++;
+  }
+
+  insertBefore(value, newVal) {
+    const newNode = new Node(newVal);
+    let currentNode = this.head;
+    console.log(currentNode);
+    while(currentNode.value !== value) {
+      currentNode.next = currentNode;
+      currentNode = newNode;
+    }
+  }
 }
 
 module.exports = {

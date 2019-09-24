@@ -48,4 +48,22 @@ describe('linked list tests', () => {
     list.insert('test2');
     expect(list.head.value.toString()).toBe('test2', 'test1');
   });
+  it('can successfully add a new node to end of linked list', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('test1');
+    list.insert('test2');
+    list.append('test3');
+    expect(list.size).toBe(3);
+    expect(list.head.next.next.value).toBe('test3');
+  });
+  it('Can successfully add multiple nodes to the end of a linked list', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('test1');
+    list.append('test2');
+    list.append('test3');
+    expect(list.size).toBe(3);
+    expect(list.head.next.value).toBe('test2');
+    expect(list.head.next.next.value).toBe('test3');
+  });
+  it('')
 });

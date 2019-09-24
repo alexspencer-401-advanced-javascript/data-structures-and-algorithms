@@ -65,5 +65,12 @@ describe('linked list tests', () => {
     expect(list.head.next.value).toBe('test2');
     expect(list.head.next.next.value).toBe('test3');
   });
-  it('')
+  it('Can successfully insert a node before a node located in', () => {
+    const list = new linkListImport.LinkedList();
+    list.insert('test1');
+    list.insert('test2');
+    list.insertBefore('test2', 'test1.5');
+    expect(list.size).toBe(3);
+    expect(list.head.next.value).toBe('test1.5');
+  });
 });

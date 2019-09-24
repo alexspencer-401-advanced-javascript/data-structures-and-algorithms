@@ -49,14 +49,26 @@ class LinkedList {
     this.size++;
   }
 
+// https://www.tutorialspoint.com/Add-elements-to-a-linked-list-using-Javascript
+  
   insertBefore(value, newVal) {
     const newNode = new Node(newVal);
-    let currentNode = this.head;
-    console.log(currentNode);
-    while(currentNode.value !== value) {
-      currentNode.next = currentNode;
-      currentNode = newNode;
+    if(this.head === null) {
+      this.head = newNode;
+      this.size++;
+      return this.head;
     }
+    let currentNode = this.head;
+    let count = 1;
+    while(currentNode.next !== null && count < value) {
+      currentNode = currentNode.next;
+      // currentNode = newNode;
+      this.size++;
+    }
+    newNode.next = currentNode.next;
+    currentNode.next = newNode;
+    this.size++;
+    return newNode;
   }
 }
 

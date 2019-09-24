@@ -77,15 +77,9 @@ describe('linked list tests', () => {
     const list = new linkListImport.LinkedList();
     list.insert('test1');
     list.insert('test2');
-    list.insertBefore('test1', 'test0');
     list.insertBefore('test2', 'test1.5');
-    console.log(list.head.value);
-    console.log(list.head.next.value);
-    console.log(list.head.next.next.value);
-    console.log(list.head.next.next.next.value);
-    expect(list.size).toBe(4);
-    expect(list.head.next.value).toBe('test0');
-    expect(list.head.value).toBe('test1.5');
+    expect(list.size).toBe(3);
+    expect(list.head.next.value).toBe('test1.5');
   });
   it('can insert before first node in list', () => {
     const list = new linkListImport.LinkedList();
@@ -99,7 +93,6 @@ describe('linked list tests', () => {
     list.insert('test1');
     list.insertAfter('test1', 'test2');
     list.insertAfter('test2', 'test3');
-    console.log(list);
     expect(list.size).toBe(3);
     expect(list.head.next.value).toBe('test2');
     expect(list.head.next.next.value).toBe('test3');
@@ -108,7 +101,6 @@ describe('linked list tests', () => {
     const list = new linkListImport.LinkedList();
     list.insert('test1');
     list.insertAfter('test1', 'test2');
-    console.log(list);
     expect(list.head.next.value).toBe('test2');
   });
 });

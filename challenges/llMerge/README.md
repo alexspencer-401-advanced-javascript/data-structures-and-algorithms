@@ -10,4 +10,4 @@ I knew we needed two linked lists, each with then leveraged our insert and appen
 ### Solution
 
 ![VSCode Solution](../../assets/ll-merge.png)
-![Whiteboard Challenge 7]()
+![Whiteboard Challenge 7](../../assets/linked-list-merge.png)

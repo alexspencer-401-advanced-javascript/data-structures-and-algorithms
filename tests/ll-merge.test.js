@@ -1,5 +1,5 @@
 const linkListImport = require('../challenges/linkedList/linked-list');
-const mergeLists = require('../challenges/llMerge/ll-merge');
+const merge = require('../challenges/llMerge/ll-merge');
 
 describe('Linked Lists Merge', () => {
   
@@ -12,7 +12,7 @@ describe('Linked Lists Merge', () => {
     list2.insert('2');
     list2.insert('4');
     list2.insert('6');
-    const result = mergeLists(list1, list2);
+    const result = merge.mergeLists(list1, list2);
     expect(result).toBe('1', '2', '3', '4', '5', '6');
   });
 });

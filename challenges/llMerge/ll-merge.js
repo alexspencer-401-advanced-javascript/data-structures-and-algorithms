@@ -14,6 +14,25 @@ function mergeLists(l1, l2) {
   }
   finalLinkedList.append(currentNodeOne.value);
   finalLinkedList.append(currentNodeTwo.value);
+
+  if(l1.size > l2.size) {
+    currentNodeOne = currentNodeOne.next;
+    while(currentNodeOne.next) {
+      finalLinkedList.append(currentNodeOne.value);
+      currentNodeOne = currentNodeOne.next;
+    }
+    finalLinkedList.append(currentNodeOne.value);
+  }
+
+  if(l2.size > l1.size) {
+    currentNodeTwo = currentNodeTwo.next;
+    while(currentNodeTwo.next) {
+      finalLinkedList.append(currentNodeTwo.value);
+      currentNodeTwo = currentNodeTwo.next;
+    }
+    finalLinkedList.append(currentNodeTwo.value);
+  }
+
   return finalLinkedList.head;
 }
 

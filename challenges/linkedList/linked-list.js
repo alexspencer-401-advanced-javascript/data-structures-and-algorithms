@@ -32,8 +32,8 @@ class LinkedList {
   toString() {
     let string = '';
     let currentNode = this.head;
-    for(let i = 0; i < this.size; i++) {
-      string = string + currentNode.value;
+    while(currentNode !== null) {
+      string = string + ' ' + currentNode.value;
       currentNode = currentNode.next;
     }
     return string;

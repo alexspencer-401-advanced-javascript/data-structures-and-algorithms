@@ -28,11 +28,6 @@ describe('Linked Lists Merge', () => {
     list2.insert('1');
     list2.insert('4');
     list2.insert('2');
-    console.log(list1.head.value);
-    console.log(list1.head.next.value);
-    console.log(list2.head.next.next.value);
-    console.log(list2.head.value);
-    console.log(list2.head.next.value);
     const result = merge.mergeLists(list1, list2);
     expect(result.value).toBe('3');
     expect(result.next.value).toBe('2');

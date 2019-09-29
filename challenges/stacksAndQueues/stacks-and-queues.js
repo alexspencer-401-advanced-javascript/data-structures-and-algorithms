@@ -22,8 +22,12 @@ class Stack {
   }
 
   pop() {
-    if(this.top) return this.value;
-    this.top = this.top.next;
+    let answer;
+    if(this.top) {
+      answer = this.top.value;
+      this.top = this.top.next;
+    } 
+    return answer;
   } 
 
   peek() {

@@ -36,4 +36,20 @@ describe('stacks and queues testing', () => {
     const result = stack.peek();
     expect(result).toBe('test2');
   });
+  it('Can successfully instantiate an empty stack', () => {
+    const emptyQueue = new stackImport.Queue;
+    expect(emptyQueue.front).toBe(null);
+  });
+  it('Can successfully enqueue into a queue', () => {
+    const queue = new stackImport.Queue;
+    queue.enqueue('test');
+    expect(queue.front.value).toBe('test');
+  });
+  it('Can successfully enqueue multiple into a queue', () => {
+    const queue = new stackImport.Queue;
+    queue.enqueue('test');
+    queue.enqueue('test2');
+    expect(queue.front.value).toBe('test');
+    expect(queue.front.next.value).toBe('test2');
+  });
 });

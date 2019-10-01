@@ -37,7 +37,7 @@ describe('stacks and queues testing', () => {
     expect(result).toBe('test2');
   });
   it('Can successfully instantiate an empty stack', () => {
-    const emptyQueue = new stackImport.Queue;
+    const emptyQueue = new stackImport.Queue();
     expect(emptyQueue.front).toBe(null);
   });
   it('Can successfully enqueue into a queue', () => {
@@ -46,10 +46,34 @@ describe('stacks and queues testing', () => {
     expect(queue.front.value).toBe('test');
   });
   it('Can successfully enqueue multiple into a queue', () => {
-    const queue = new stackImport.Queue;
+    const queue = new stackImport.Queue();
     queue.enqueue('test');
     queue.enqueue('test2');
     expect(queue.front.value).toBe('test');
     expect(queue.front.next.value).toBe('test2');
+  });
+  it('Can successfully dequeue out of a queue the expected value', () => {
+    const queue = new stackImport.Queue();
+    queue.enqueue('test');
+    queue.enqueue('test1');
+    queue.dequeue();
+    expect(queue.front.value).toBe('test1');
+  });
+  it('Can successfully peek into a queue, seeing the expected value', () => {
+    const queue = new stackImport.Queue();
+    queue.enqueue('test');
+    expect(queue.front.value).toBe('test');
+  });
+  it('Can successfully empty a queue after multiple dequeues', () => {
+    const queue = new stackImport.Queue();
+    queue.enqueue('test');
+    queue.enqueue('test1');
+    queue.dequeue();
+    queue.dequeue();
+    expect(queue.front).toBe(null);
+  });
+  it('Can successfully instantiate an empty queue', () => {
+    const queue = new stackImport.Queue();
+    expect(queue.front).toBe(null);
   });
 });

@@ -63,6 +63,11 @@ class Queue {
     } 
     return answer;
   }
+
+  peek() {
+    return this.front.value;
+  }
+
 }
 
 module.exports = {

@@ -6,3 +6,4 @@
 ### [Code Challenge 4 | Linked List](challenges/linkedList/README.md)
 ### [Code Challenge 5, 6, 7 | Linked List Insertions](challenges/linkedList/README.md)
 ### [Code Challenge 8 | Linked List Merge](challenges/llMerge/README.md)
+### [Code Challenge 10 | Stacks and Queues](challenges/stacksAndQueues/README.md)

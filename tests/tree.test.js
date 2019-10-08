@@ -47,7 +47,21 @@ describe('tree testing', () => {
     tree.root.right = new Node('G');
     tree.root.right.right = new Node('I');
     tree.root.right.right.left = new Node('H');
-    expect().toEqual(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']);
+    expect(tree.inOrder(tree.root)).toEqual(['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']);
+  });
+
+  it('can successfully return a collection from a postorder traversal', () => {
+    const tree = new BinaryTree();
+    tree.root = new Node('F');
+    tree.root.left = new Node('B');
+    tree.root.left.left = new Node('A');
+    tree.root.left.right = new Node('D');
+    tree.root.left.right.left = new Node('C');
+    tree.root.left.right.right = new Node('E');
+    tree.root.right = new Node('G');
+    tree.root.right.right = new Node('I');
+    tree.root.right.right.left = new Node('H');
+    expect(tree.postOrder(tree.root)).toEqual(['A', 'C', 'E', 'D', 'B', 'H', 'I', 'G', 'F']);
   });
 
 });

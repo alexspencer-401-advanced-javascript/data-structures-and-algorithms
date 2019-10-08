@@ -64,4 +64,18 @@ describe('tree testing', () => {
     expect(tree.postOrder(tree.root)).toEqual(['A', 'C', 'E', 'D', 'B', 'H', 'I', 'G', 'F']);
   });
 
+  it('can successfully add a node with a certain value to where it is supposed to go', () => {
+    const bsTree = new BinarySearchTree();
+    bsTree.root = new Node('F');
+    bsTree.root.left = new Node('B');
+    bsTree.root.left.left = new Node('A');
+    bsTree.root.left.right = new Node('D');
+    bsTree.root.left.right.right = new Node('E');
+    bsTree.root.right = new Node('G');
+    bsTree.root.right.right = new Node('I');
+    bsTree.root.right.right.left = new Node('H');
+    bsTree.add('C');
+    expect(bsTree.root.left.right.left.value).toBe('C');
+  });
+
 });

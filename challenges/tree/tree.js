@@ -1,4 +1,3 @@
-
 class Node {
   constructor(value) {
     this.value = value;
@@ -7,22 +6,22 @@ class Node {
   }
 }
 
-// helpful resource here: http://maxinrui.com/index.php/2018/06/19/binary-tree-preorder-inorder-postorder-traverse-iteratively-in-javascript/
+// http://maxinrui.com/index.php/2018/06/19/binary-tree-preorder-inorder-postorder-traverse-iteratively-in-javascript/
 
 class BinaryTree {
   constructor() {
     this.root = null;
   }
-  
-  // helpful resource here: http://maxinrui.com/index.php/2018/06/19/binary-tree-preorder-inorder-postorder-traverse-iteratively-in-javascript/
-  
+
+  // http://maxinrui.com/index.php/2018/06/19/binary-tree-preorder-inorder-postorder-traverse-iteratively-in-javascript/
+
   preOrder(node) {
     if(node === null) return [];
-    
+
     let stack = [];
     let result = [];
     stack.push(node);
-    
+
     while(stack.length > 0) {
       let current = stack.pop();
       result.push(current.value);
@@ -31,15 +30,15 @@ class BinaryTree {
     }
     return result;
   }
-  
-  // helpful resource here: http://maxinrui.com/index.php/2018/06/19/binary-tree-preorder-inorder-postorder-traverse-iteratively-in-javascript/
-  
+
+  // http://maxinrui.com/index.php/2018/06/19/binary-tree-preorder-inorder-postorder-traverse-iteratively-in-javascript/
+
   inOrder(node) {
     if(node === null) return [];
     let result = [];
     let stack = [];
     let pointerNode = node;
-    while(stack.length !==0 || pointerNode !== null) {
+    while(stack.length !== 0 || pointerNode !== null) {
       if(pointerNode !== null) {
         stack.push(pointerNode);
         pointerNode = pointerNode.left;
@@ -51,8 +50,8 @@ class BinaryTree {
     }
     return result;
   }
-  
-  // helpful resource here: http://maxinrui.com/index.php/2018/06/19/binary-tree-preorder-inorder-postorder-traverse-iteratively-in-javascript/
+
+  // http://maxinrui.com/index.php/2018/06/19/binary-tree-preorder-inorder-postorder-traverse-iteratively-in-javascript/
 
   postOrder(node) {
     if(node === null) return [];
@@ -75,28 +74,28 @@ class BinaryTree {
 
 class BinarySearchTree {
   constructor() {
+    this.root = null;
   }
 
   add(value) {
-    const newNode = new Node(value);
-    if(this.root === null) {
-      this.root = newNode;
-    }
-    else {
-      this.insertNode(this.root, newNode);
-    }
-
-    // insertNode(newNode.value < node.value) {
-    //   if(node.left === null) node.left = newNode;
-    //   this.insertNode(node.left, newNode);
-    // }
-
+    let node = this.root;
+    return recurse(value, node);
+  
   }
 
   contains() {
 
   }
 
+}
+
+function recurse(value, node) {
+  let dir;
+  value > node.value ? dir = 'right' : dir = 'left';
+  if(node[dir]) {
+    return recurse(value, node[dir]);
+  }
+  return node[dir] = new Node(value);
 }
 
 module.exports = {

@@ -11,3 +11,4 @@
 - [Code Challenge 12 | Animal Shelter](challenges/fifoAnimalShelter/README.md)
 - [Code Challenge 13 | Multi Bracket Validation](challenges/multiBracketValidation/README.md)
 - [Code Challenge 15 | Trees](challenges/tree/README.md)
+- [Code Challenge 16 | FizzBuzz Tree](challenges/fizzBuzzTree/README.md)

@@ -80,11 +80,11 @@ class BinarySearchTree {
   add(value) {
     let node = this.root;
     return recurse(value, node);
-  
   }
 
-  contains() {
-
+  contains(value) {
+    let node = this.root;
+    return recurseFind(node, value);
   }
 
 }
@@ -96,6 +96,21 @@ function recurse(value, node) {
     return recurse(value, node[dir]);
   }
   return node[dir] = new Node(value);
+}
+
+function recurseFind(node, value) {
+  if(node.key === null) {
+    return null;
+  }
+  const nodeKey = parseInt(node.value);
+  if(value < nodeKey) {
+    return recurseFind(node.left, value);
+  } else if(value > nodeKey) {
+    return recurseFind(node.right, value);
+  } else {
+    return false;
+  }
+
 }
 
 module.exports = {

@@ -78,4 +78,18 @@ describe('tree testing', () => {
     expect(bsTree.root.left.right.left.value).toBe('C');
   });
 
+  it('can successfully locate a node with the value provided', () => {
+    const bsTree = new BinarySearchTree();
+    bsTree.root = new Node('F');
+    bsTree.root.left = new Node('B');
+    bsTree.root.left.left = new Node('A');
+    bsTree.root.left.right = new Node('D');
+    bsTree.root.left.right.right = new Node('E');
+    bsTree.root.right = new Node('G');
+    bsTree.root.right.right = new Node('I');
+    bsTree.root.right.right.left = new Node('H');
+    expect(bsTree.contains('B')).toBe(true);
+    expect(bsTree.contains('J')).toBe(false);
+  });
+
 });

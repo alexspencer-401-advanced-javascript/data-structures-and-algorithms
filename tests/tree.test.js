@@ -89,7 +89,7 @@ describe('tree testing', () => {
     bsTree.root.right.right = new Node('I');
     bsTree.root.right.right.left = new Node('H');
     expect(bsTree.contains('B')).toBe(true);
-    expect(bsTree.contains('J')).toBe(false);
+    expect(bsTree.contains('Z')).toBe(false);
   });
 
 });

@@ -84,7 +84,7 @@ class BinarySearchTree {
 
   contains(value) {
     let node = this.root;
-    return recurseFind(node, value);
+    return recurseFind(value, node);
   }
 
 }
@@ -98,18 +98,12 @@ function recurse(value, node) {
   return node[dir] = new Node(value);
 }
 
-function recurseFind(node, value) {
-  if(node.key === null) {
-    return null;
-  }
-  const nodeKey = parseInt(node.value);
-  if(value < nodeKey) {
-    return recurseFind(node.left, value);
-  } else if(value > nodeKey) {
-    return recurseFind(node.right, value);
-  } else {
-    return false;
-  }
+function recurseFind(value, node) {
+  let dir;
+  if(value === node.value) return true;
+  value > node.value ? dir = 'right' : dir = 'left';
+  if(node[dir]) return recurseFind(value, node[dir]);
+  else return false;
 
 }
 
